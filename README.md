@@ -24,6 +24,12 @@ The application uses the **OMDb API** to search for movies and series and displa
 * **OMDb API**
 * **localStorage**
 
+## Screenshots
+<img width="1181" height="763" alt="Στιγμιότυπο οθόνης 2026-08-28 093423" src="https://github.com/user-attachments/assets/516e8d5d-f521-467d-9ee4-ce9f1ecdfb98" />
+<img width="1089" height="829" alt="Στιγμιότυπο οθόνης 2026-08-28 093437" src="https://github.com/user-attachments/assets/55060825-e5d0-48b4-b887-723d03890065" />
+<img width="1153" height="777" alt="Στιγμιότυπο οθόνης 2026-08-28 093453" src="https://github.com/user-attachments/assets/9c0802a9-d209-425f-b09e-96e275bb5f43" />
+
+
 ## 🔌 API
 
 This project uses the **OMDb API** to retrieve movie and TV series information.
@@ -33,15 +39,6 @@ The API is used for:
 * Searching for movies and series
 * Retrieving detailed information
 * Displaying posters, ratings, cast, plot, and other movie data
-
-## 🚀 How to Run
-
-1. Clone or download the repository.
-2. Open the project folder.
-3. Add your own OMDb API key to `script.js`.
-4. Open `index.html` in a browser.
-5. Search for a movie or TV series.
-
 > **Note:** The API key is kept private and is not included in the public repository. You will need to use your own OMDb API key to run the project locally.
 
 ## 🌐 Live Demo
