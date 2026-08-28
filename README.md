@@ -31,7 +31,7 @@ The application uses the **OMDb API** to search for movies and series and displa
 <img width="500" src="https://github.com/user-attachments/assets/9c0802a9-d209-425f-b09e-96e275bb5f43" />
 </div>
 
-## 🔌 API
+##  API
 
 This project uses the **OMDb API** to retrieve movie and TV series information.
 
