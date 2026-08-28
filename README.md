@@ -24,11 +24,12 @@ The application uses the **OMDb API** to search for movies and series and displa
 * **OMDb API**
 * **localStorage**
 
-## Screenshots
-<img width="1181" height="763" alt="Στιγμιότυπο οθόνης 2026-08-28 093423" src="https://github.com/user-attachments/assets/516e8d5d-f521-467d-9ee4-ce9f1ecdfb98" />
-<img width="1089" height="829" alt="Στιγμιότυπο οθόνης 2026-08-28 093437" src="https://github.com/user-attachments/assets/55060825-e5d0-48b4-b887-723d03890065" />
-<img width="1153" height="777" alt="Στιγμιότυπο οθόνης 2026-08-28 093453" src="https://github.com/user-attachments/assets/9c0802a9-d209-425f-b09e-96e275bb5f43" />
-
+## 📸 Screenshots
+<p align="center">
+  <img width="600" src="https://github.com/user-attachments/assets/516e8d5d-f521-467d-9ee4-ce9f1ecdfb98" />
+  <img width="600" src="https://github.com/user-attachments/assets/55060825-e5d0-48b4-b887-723d03890065" />
+  <img width="600" src="https://github.com/user-attachments/assets/9c0802a9-d209-425f-b09e-96e275bb5f43" />
+</p>
 
 ## 🔌 API
 
