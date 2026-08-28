@@ -1,0 +1,318 @@
+* {
+    box-sizing: border-box;
+}
+
+ body {
+    background: linear-gradient(135deg, #080000 0%, #4a0000 35%, #b20710 65%, #250000 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 80px 30px;
+    font-family: Arial, sans-serif;
+}
+
+ #container {
+    width: 100%;
+    max-width: 1100px;
+    background: rgba(20, 0, 0, 0.85);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+}
+
+ h1 {
+    text-align: center;
+    color: rgb(255, 221, 221);
+    font-size: 42px;
+    margin-bottom: 30px;
+}
+
+ #movieform {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+ #movieinp {
+    width: 350px;
+    padding: 13px 18px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+}
+
+ #movieinp:focus {
+    box-shadow: 0 0 0 2px rgb(255, 221, 221);
+}
+
+ #srcbtn {
+    padding: 13px 22px;
+    border: none;
+    border-radius: 25px;
+    background: rgb(255, 221, 221);
+    color: #7b0000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+ #srcbtn:hover {
+    background: white;
+    transform: translateY(-2px);
+}
+
+ #movieresults {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 190px);
+    justify-content: center;
+    gap: 25px;
+}
+
+ .movie-card {
+    background: rgba(20, 0, 0, 0.75);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.25s ease;
+}
+
+ .movie-card:hover {
+    transform: translateY(-6px);
+}
+
+ .movie-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+ .movie-info {
+    padding: 15px;
+}
+
+ .movie-info h2 {
+    color: rgb(255, 221, 221);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+ .movie-info p {
+    color: #ddd;
+    margin-bottom: 6px;
+}
+
+ .details-btn,
+.watchlist-btn,
+.remove-btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background: rgb(255, 221, 221);
+    color: #7b0000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+ .details-btn:hover,
+.watchlist-btn:hover,
+.remove-btn:hover {
+    background: white;
+    transform: translateY(-2px);
+}
+
+ .modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    z-index: 1000;
+}
+
+ .modal.show {
+    display: flex;
+}
+
+ #modalContent {
+    position: relative;
+    width: 100%;
+    max-width: 850px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: rgba(20, 0, 0, 0.98);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+}
+
+ .details-card {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 30px;
+}
+
+ .details-card > img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+ .details-info h2 {
+    color: rgb(255, 221, 221);
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+ .details-info p {
+    color: #ddd;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+ .details-info strong {
+    color: rgb(255, 221, 221);
+}
+
+ .details-info .plot {
+    margin-top: 20px;
+}
+
+ .close-details {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background: rgb(255, 221, 221);
+    color: #7b0000;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+ .close-details:hover {
+    background: white;
+}
+
+ #mywatchlist {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+}
+
+ #mywatchlist::before {
+    content: "My Watchlist";
+    grid-column: 1 / -1;
+    color: rgb(255, 221, 221);
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+ .watchlist-card {
+    background: rgba(20, 0, 0, 0.7);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+}
+
+ .watchlist-card:hover {
+    transform: translateY(-4px);
+}
+
+ .watchlist-card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    display: block;
+}
+
+ .watchlist-card div {
+    padding: 8px;
+}
+
+ .watchlist-card h3 {
+    color: rgb(255, 221, 221);
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+ .watchlist-card p {
+    color: #ddd;
+    font-size: 12px;
+}
+
+ .error-message {
+    color: #ffb3b3;
+    text-align: center;
+    font-size: 18px;
+    grid-column: 1 / -1;
+    margin-top: 20px;
+}
+
+ @media (max-width: 700px) {
+    body {
+        padding: 30px 15px;
+    }
+    #container {
+        padding: 25px 18px;
+    }
+    h1 {
+        font-size: 32px;
+    }
+    #movieform {
+        flex-direction: column;
+    }
+    #movieinp {
+        width: 100%;
+    }
+    #srcbtn {
+        width: 100%;
+    }
+    #movieresults {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    .movie-card img {
+        height: 220px;
+    }
+    .modal {
+        padding: 15px;
+    }
+    #modalContent {
+        padding: 25px 20px;
+        max-height: 95vh;
+    }
+    .details-card {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .details-card > img {
+        max-width: 250px;
+        margin: auto;
+    }
+    .details-info h2 {
+        font-size: 25px;
+    }
+    #mywatchlist {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+    .watchlist-card img {
+        height: 140px;
+    }
+}
